@@ -1,5 +1,6 @@
 import * as React from "react";
 import { tokensByMode, type DesignTokens, type ThemeMode } from "@tokens";
+import { deepMerge } from "./utils/deep-merge";
 
 export type UiOhTheme = DesignTokens;
 

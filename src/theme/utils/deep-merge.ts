@@ -1,4 +1,4 @@
-function deepMerge<T extends object>(base: T, override?: Partial<T>): T {
+export function deepMerge<T extends object>(base: T, override?: Partial<T>): T {
   if (!override) return base;
   const out: any = Array.isArray(base)
     ? [...(base as any)]
