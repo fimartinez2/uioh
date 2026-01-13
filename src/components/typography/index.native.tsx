@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Text as RNText, type TextProps as RNTextProps } from "react-native";
-import { useTheme } from "../theme";
+import { useTheme } from "@theme";
 import type {
   HeadingVariant,
   TextAlign,
   TextColor,
   TextVariant,
 } from "./core/types";
-import { resolveTextColor } from "./core/colors";
+import { resolveColor } from "@core";
 import { getHeadingStyle, getTextStyle } from "./core/variant-styles";
 
 export type TextProps = {
@@ -35,7 +35,7 @@ export function Text({
       numberOfLines={numberOfLines}
       style={[
         {
-          color: resolveTextColor(t, color),
+          color: resolveColor(t, color),
           textAlign: align,
           fontSize: v.fontSize,
           lineHeight: v.lineHeight,
@@ -75,7 +75,7 @@ export function Heading({
       numberOfLines={numberOfLines}
       style={[
         {
-          color: resolveTextColor(t, color),
+          color: resolveColor(t, color),
           textAlign: align,
           fontSize: v.fontSize,
           lineHeight: v.lineHeight,

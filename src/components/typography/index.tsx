@@ -8,9 +8,10 @@ import type {
   TextColor,
   TextVariant,
 } from "./core/types";
-import { resolveTextColor } from "./core/colors";
+
 import { getHeadingStyle, getTextStyle } from "./core/variant-styles";
-import { useTheme } from "../theme";
+import { useTheme } from "@theme";
+import { resolveColor } from "@core";
 
 export type TextProps = {
   children: React.ReactNode;
@@ -38,7 +39,7 @@ export function Text({
 
   const finalStyle: React.CSSProperties = {
     margin: 0,
-    color: resolveTextColor(t, color),
+    color: resolveColor(t, color),
     textAlign: align,
     fontSize: v.fontSize,
     lineHeight: `${v.lineHeight}px`,
@@ -83,7 +84,7 @@ export function Heading({
 
   const finalStyle: React.CSSProperties = {
     margin: 0,
-    color: resolveTextColor(t, color),
+    color: resolveColor(t, color),
     textAlign: align,
     fontSize: v.fontSize,
     lineHeight: `${v.lineHeight}px`,

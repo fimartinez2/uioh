@@ -1,4 +1,4 @@
-import type { UiOhTheme } from "../../theme";
+import type { UiOhTheme } from "@theme";
 import type { HeadingVariant, TextVariant } from "./types";
 
 export function getTextStyle(t: UiOhTheme, variant: TextVariant) {
