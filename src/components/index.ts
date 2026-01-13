@@ -1,2 +1,2 @@
-export { Caption, Label, Text } from "./typography";
+export { Caption, Label, Text, Heading } from "./typography";
 export { CanvasBackground } from "./canvas";
