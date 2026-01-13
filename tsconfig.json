@@ -10,7 +10,18 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "jsx": "react-jsx",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@core": ["./src/core"],
+      "@core/*": ["./src/core/*"],
+      "@theme": ["./src/theme"],
+      "@theme/*": ["./src/theme/*"],
+      "@tokens": ["./src/tokens"],
+      "@tokens/*": ["./src/tokens/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"]
+    }
   },
+
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

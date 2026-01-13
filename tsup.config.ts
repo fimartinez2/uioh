@@ -10,4 +10,12 @@ export default defineConfig({
   splitting: false,
   treeshake: true,
   external: ["react", "react-native"],
+  esbuildOptions(options) {
+    options.alias = {
+      "@core": "./src/core",
+      "@tokens": "./src/tokens",
+      "@theme": "./src/theme",
+      "@components": "./src/components",
+    };
+  },
 });

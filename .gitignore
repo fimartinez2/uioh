@@ -34,7 +34,7 @@ coverage/
 .cache/
 .eslintcache
 
-# Turbo / Next / Expo (por si usas ejemplos luego)
+# Turbo / Next / Expo
 .next/
 .expo/
 .expo-shared/
