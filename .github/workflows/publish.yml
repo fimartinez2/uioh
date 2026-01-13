@@ -6,7 +6,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write # solo si usas --provenance (recomendado)
+  id-token: write
 
 jobs:
   publish:
@@ -29,7 +29,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Opcional pero recomendado: falla si faltan archivos en dist o exports
       - name: Pack dry-run
         run: npm pack --dry-run
 

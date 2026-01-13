@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/react": "^19.2.8",
