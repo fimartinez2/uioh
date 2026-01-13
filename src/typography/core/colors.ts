@@ -1,4 +1,4 @@
-import type { UiOhTheme } from "@uioh/theme";
+import type { UiOhTheme } from "../../theme";
 import type { TextColor } from "./types";
 
 export function resolveTextColor(t: UiOhTheme, color: TextColor) {
