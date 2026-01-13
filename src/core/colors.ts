@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { UiOhTheme } from "../theme";
+=======
+import type { UiOhTheme } from "@theme";
+>>>>>>> 6d8c13f (chore: folder restructure)
 
 export type ColorPath =
   | "text.primary"

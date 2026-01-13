@@ -1,16 +1,12 @@
 import * as React from "react";
-import { tokensByMode, type DesignTokens, type ThemeMode } from "../tokens";
+import { tokensByMode, type DesignTokens, type ThemeMode } from "@tokens";
 
 export type UiOhTheme = DesignTokens;
 
 export type UiOhProviderProps = {
-  /** Controlled */
   mode?: ThemeMode;
-  /** Uncontrolled */
   defaultMode?: ThemeMode;
-  /** Notifica cambios (controlled o uncontrolled) */
   onModeChange?: (mode: ThemeMode) => void;
-
   theme?: Partial<UiOhTheme>;
   children: React.ReactNode;
 };
