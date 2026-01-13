@@ -1,0 +1,43 @@
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+*.tgz
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage / tests
+coverage/
+
+# Cache
+.cache/
+.eslintcache
+
+# Turbo / Next / Expo (por si usas ejemplos luego)
+.next/
+.expo/
+.expo-shared/
+
+# Misc
+*.log
