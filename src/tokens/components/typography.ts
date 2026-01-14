@@ -30,8 +30,8 @@ export type TypographyTokens = {
 
 export const typographyTokens: TypographyTokens = {
   fontFamily: {
-    base: "System",
-    mono: "ui-monospace",
+    base: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
   fontSize: {
     h1: 32,
