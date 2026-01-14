@@ -51,10 +51,6 @@ const t = useTheme();
 t.color.bg.canvas;
 ```
 
-## 🪪 License
-
-MIT
-
 ## 🚀 Demo Highlights
 
 ### Expo (React Native)
