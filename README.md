@@ -9,10 +9,10 @@
 
 ## 🌐 Demos & Documentation
 
-| Platform   | Tech Stack    | Live Demo                                         | Source Code                                               |
-| :--------- | :------------ | :------------------------------------------------ | :-------------------------------------------------------- |
-| **Web**    | Next.js 15+   | [View Demo ↗](https://uioh-next-demo.vercel.app/) | [GitHub ↗](https://github.com/fimartinez2/uioh-next-demo) |
-| **Mobile** | Expo / Router | [Scan QR ↗](https://example-expo-demo.com)        | [GitHub ↗](https://github.com/fimartinez2/uioh-expo-demo) |
+| Platform   | Tech Stack    | Live Demo                                                                                                                   | Source Code                                               |
+| :--------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| **Web**    | Next.js 15+   | [View Demo ↗](https://uioh-next-demo.vercel.app/)                                                                           | [GitHub ↗](https://github.com/fimartinez2/uioh-next-demo) |
+| **Mobile** | Expo / Router | [Expo Update ↗](https://expo.dev/accounts/fimartinez2/projects/uioh-expo-demo/updates/d392d651-2681-4563-a45a-eb6a21ceead9) | [GitHub ↗](https://github.com/fimartinez2/uioh-expo-demo) |
 
 ---
 
