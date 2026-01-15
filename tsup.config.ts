@@ -7,10 +7,14 @@ const shared: Options = {
   treeshake: true,
   target: "es2020",
   external: ["react", "react-native"],
+  outExtension({ format }) {
+    return {
+      js: format === "esm" ? ".js" : ".cjs",
+    };
+  },
 };
 
 export default defineConfig([
-  // WEB BUILD
   {
     ...shared,
     format: ["esm", "cjs"],
@@ -18,11 +22,8 @@ export default defineConfig([
     clean: true,
     esbuildOptions(options) {
       options.resolveExtensions = [".tsx", ".ts", ".js"];
-      options.alias = { "@components": "./src/components" };
     },
   },
-
-  // NATIVE BUILD
   {
     ...shared,
     format: ["esm", "cjs"],
@@ -36,13 +37,14 @@ export default defineConfig([
         ".ts",
         ".js",
       ];
-      options.alias = { "@components": "./src/components" };
     },
   },
   {
     ...shared,
     format: ["esm"],
-    dts: { only: true },
+    dts: {
+      only: true,
+    },
     outDir: "dist",
   },
 ]);
