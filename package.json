@@ -1,20 +1,23 @@
 {
   "name": "uioh",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
   "version": "1.0.0",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "main": "./dist/web/index.cjs",
+  "module": "./dist/web/index.js",
+  "types": "./dist/index.d.ts",
+  "react-native": "./dist/native/index.js",
   "files": [
     "dist"
   ],
-  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "react-native": "./dist/native/index.js",
+      "import": "./dist/web/index.js",
+      "require": "./dist/web/index.cjs",
+      "default": "./dist/web/index.js"
+    }
+  },
   "peerDependencies": {
     "react": ">=18",
     "react-native": ">=0.72"
@@ -31,7 +34,6 @@
   "devDependencies": {
     "@types/react": "^19.2.8",
     "tsup": "^8.5.1",
-    "typescript": "~5.9.2",
-    "react-native": "0.72.4"
+    "typescript": "~5.9.2"
   }
 }

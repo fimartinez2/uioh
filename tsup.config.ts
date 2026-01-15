@@ -1,21 +1,48 @@
-import { defineConfig } from "tsup";
+import { defineConfig, type Options } from "tsup";
 
-export default defineConfig({
+const shared: Options = {
   entry: ["src/index.ts"],
-  format: ["esm", "cjs"],
-  dts: true,
   sourcemap: true,
-  clean: true,
-  outDir: "dist",
   splitting: false,
   treeshake: true,
+  target: "es2020",
   external: ["react", "react-native"],
-  esbuildOptions(options) {
-    options.alias = {
-      "@core": "./src/core",
-      "@tokens": "./src/tokens",
-      "@theme": "./src/theme",
-      "@components": "./src/components",
-    };
+};
+
+export default defineConfig([
+  // WEB BUILD
+  {
+    ...shared,
+    format: ["esm", "cjs"],
+    outDir: "dist/web",
+    clean: true,
+    esbuildOptions(options) {
+      options.resolveExtensions = [".tsx", ".ts", ".js"];
+      options.alias = { "@components": "./src/components" };
+    },
   },
-});
+
+  // NATIVE BUILD
+  {
+    ...shared,
+    format: ["esm", "cjs"],
+    outDir: "dist/native",
+    clean: false,
+    esbuildOptions(options) {
+      options.resolveExtensions = [
+        ".native.tsx",
+        ".native.ts",
+        ".tsx",
+        ".ts",
+        ".js",
+      ];
+      options.alias = { "@components": "./src/components" };
+    },
+  },
+  {
+    ...shared,
+    format: ["esm"],
+    dts: { only: true },
+    outDir: "dist",
+  },
+]);
